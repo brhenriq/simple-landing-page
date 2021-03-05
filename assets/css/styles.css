@@ -1,13 +1,15 @@
 :root {
-  /*colors*/
+  /*===colors===*/
   --color-primary: #0A1128;
   --color-white: #FFF;
   --color-light-gray: #EEE;
+  --secondary-color: #dc143c;
 
-  /*measures*/
+  /*===measures===*/
   --gap: 3rem;
 }
 
+/*===Global===*/
 * {
   margin: 0;
   padding: 0;
@@ -22,6 +24,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   color: var(--color-primary);
   font-size: 2rem;
+  line-height: 1.5;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -57,6 +60,7 @@ a {
   text-decoration: none;
 }
 
+/*===Background===*/
 .main-bg {
   background-image: url('../img/main-bg.svg');
   background-size: cover;
@@ -69,7 +73,7 @@ a {
 }
 
 .main-content {
-  max-width: 1200px;
+  max-width: 120rem;
   margin: 0 auto;
   padding: var(--gap);
 }
@@ -78,12 +82,14 @@ a {
   min-height: 100vh;
 }
 
+/*===Menu===*/
 .menu {
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   width: 100%;
+  z-index: 1;
 
   border-bottom: 0.1rem solid var(--color-light-gray);
 }
@@ -125,10 +131,41 @@ a {
   left: 25%;
   width: 0%;
   height: 0.2rem;
-  background: crimson;
+  background: var(--secondary-color);
   transition: all 0.3s ease-in-out;
 }
 
 .menu ul li a:hover::after {
   width: 50%;
+}
+
+.menu-spacing {
+  height: 6.5rem;
+}
+
+.home-content {
+  position: relative;
+  top: -8rem;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: var(--gap);
+  height: 100vh;
+}
+
+.home-text-content, .home-img {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+
+.home-text-content h2 {
+  font-size: 6rem;
+  margin-bottom: 5rem;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.home-img img {
+  width: 100%;
+  height: auto;
 }
