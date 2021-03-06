@@ -68,6 +68,30 @@ p {
   margin-bottom: 3rem;
 }
 
+table {
+  min-width: 36rem;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table td, table th {
+  white-space: nowrap;
+  padding: 1rem;
+  text-align: left;
+  border: 0.1rem solid var(--color-light-gray);
+}
+
+tfoot td, table th {
+  background: var(--color-light-gray);
+}
+
+table caption {
+  font-size: 1.6rem;
+  text-align: left;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
 /*===Background===*/
 .main-bg {
   background-image: url('../img/main-bg.svg');
@@ -227,4 +251,24 @@ p {
   left: -2rem;
   rotate: (5deg);
   font-style: italic;
+}
+
+.grid-iamge {
+  width: 100%;
+  max-width: 36rem;
+  max-height: 36rem;
+  overflow: hidden;
+}
+
+.grid-iamge img {
+  transition: all 0.3s ease-in-out;
+}
+
+.grid-iamge img:hover {
+  transform: rotate(5deg) translate(-3%, 3%) scale(1.2);
+}
+
+.responsive-table {
+  overflow: hidden;
+  overflow-x: auto;
 }
