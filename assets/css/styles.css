@@ -4,6 +4,7 @@
   --color-white: #FFF;
   --color-light-gray: #EEE;
   --secondary-color: #dc143c;
+  --color-placeholder: #b6b6b6;
 
   /*===measures===*/
   --gap: 3rem;
@@ -178,7 +179,6 @@ table caption {
 /*===Home - Section===*/
 .home-content {
   position: relative;
-  top: -8rem;
   display: grid;
   grid-template-columns: 1fr 1.5fr;
   gap: var(--gap);
@@ -217,7 +217,7 @@ table caption {
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .section-header {
@@ -253,6 +253,7 @@ table caption {
   font-style: italic;
 }
 
+/*===Gallery - Section===*/
 .grid-iamge {
   width: 100%;
   max-width: 36rem;
@@ -268,7 +269,85 @@ table caption {
   transform: rotate(5deg) translate(-3%, 3%) scale(1.2);
 }
 
+/*===Pricing - Section===*/
 .responsive-table {
   overflow: hidden;
   overflow-x: auto;
+}
+
+/*===Contact Form - Section===*/
+.contact-form {
+  grid-column: span 2;
+}
+
+.contact-form .form-grid {
+  border: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--gap);
+}
+
+.form-grid legend {
+  font-style: italic;
+  font-size: 1.6rem;
+  margin-bottom: var(--gap);
+}
+
+.form-group {
+  flex: 1 1 40rem;
+}
+
+.form-group label{
+  display: block;
+  margin-bottom: 1rems;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 1.5rem 2rem;
+  border: none;
+  font-size: 3rem;
+}
+
+body .full-width {
+  width: 100%;
+  flex: 1 1 100%;
+}
+
+.form-group button {
+  border: 0.5rem solid var(--color-white);
+  background: none;
+  color: var(--color-white);
+  padding: 1.5rem 2rem;
+  font-size: 3rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.form-group button:hover {
+  border: 0.5rem solid var(--color-primary);
+  background: var(--color-white);
+  color: var(--color-primary);
+}
+
+.form-group ::placeholder {
+  color: var(--color-placeholder);
+}
+
+/*===Footer===*/
+.footer {
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.footer p {
+  color: var(--color-placeholder);
+  margin: 0;
+  padding: var(--gap);
+}
+
+.heart {
+  color: var(--secondary-color);
 }
