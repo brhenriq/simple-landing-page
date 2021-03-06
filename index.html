@@ -15,11 +15,14 @@
 
 <body>
 
+  <input type="checkbox" aria-label="Close menu" role="button" class="close-menu" id="close-menu">
+  <label for="close-menu" class="close-menu-label" title="Close menu"></label>
+
   <aside class="menu white-bg">
     <div class="main-content menu-content">
-      <h1 class="logo"><a href="#home">LOGO</a></h1>
+      <h1 class="logo" onclick="Menu.close()"><a href="#home">LOGO</a></h1>
 
-      <ul>
+      <ul onclick="Menu.close()">
         <li><a href="#intro">Intro</a></li>
         <li><a href="#top3">Top 3</a></li>
         <li><a href="#galllery">Gallery</a></li>
@@ -102,17 +105,17 @@
       </header>
 
       <div class="grid">
-        <div class="grid-iamge"><img src="https://source.unsplash.com/random/360x360?r=1"
+        <div class="grid-image"><img src="https://source.unsplash.com/random/360x360?r=1"
             alt="Imagem aleatória de Unsplash"></div>
-        <div class="grid-iamge"><img src="https://source.unsplash.com/random/360x360?r=2"
+        <div class="grid-image"><img src="https://source.unsplash.com/random/360x360?r=2"
             alt="Imagem aleatória de Unsplash"></div>
-        <div class="grid-iamge"><img src="https://source.unsplash.com/random/360x360?r=3"
+        <div class="grid-image"><img src="https://source.unsplash.com/random/360x360?r=3"
             alt="Imagem aleatória de Unsplash"></div>
-        <div class="grid-iamge"><img src="https://source.unsplash.com/random/360x360?r=4"
+        <div class="grid-image"><img src="https://source.unsplash.com/random/360x360?r=4"
             alt="Imagem aleatória de Unsplash"></div>
-        <div class="grid-iamge"><img src="https://source.unsplash.com/random/360x360?r=5"
+        <div class="grid-image"><img src="https://source.unsplash.com/random/360x360?r=5"
             alt="Imagem aleatória de Unsplash"></div>
-        <div class="grid-iamge"><img src="https://source.unsplash.com/random/360x360?r=6"
+        <div class="grid-image"><img src="https://source.unsplash.com/random/360x360?r=6"
             alt="Imagem aleatória de Unsplash"></div>
       </div>
     </div>
@@ -254,6 +257,9 @@
   <footer id="footer" class="white-bg footer">
     <p>Feito com <span class="heart">♥</span> por <a rel="nofollow" target="_blank" href="https://github.com/brhenriq">Bruno Henrique</a></p>
   </footer>
+
+  <a href="#" class="back-to-top">➤</a>
+  <script src="./assets/js/script.js"></script>
 </body>
 
 </html>

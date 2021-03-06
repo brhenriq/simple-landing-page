@@ -254,18 +254,18 @@ table caption {
 }
 
 /*===Gallery - Section===*/
-.grid-iamge {
+.grid-image {
   width: 100%;
   max-width: 36rem;
   max-height: 36rem;
   overflow: hidden;
 }
 
-.grid-iamge img {
+.grid-image img {
   transition: all 0.3s ease-in-out;
 }
 
-.grid-iamge img:hover {
+.grid-image img:hover {
   transform: rotate(5deg) translate(-3%, 3%) scale(1.2);
 }
 
@@ -350,4 +350,106 @@ body .full-width {
 
 .heart {
   color: var(--secondary-color);
+}
+
+.close-menu {
+  display: none;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--color-white);
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: var(--color-primary);
+  transform: rotate( -90deg);
+  border: 0.1rem solid var(--color-primary)
+}
+
+/*Breakpoints*/
+@media(max-width: 80rem) {
+  .home-content, .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grid {
+    display: block;
+  }
+
+  .grid-image {
+    margin: 0 auto 3rem;
+    width: 100%;
+    max-width: 80%;
+    max-height: 100%;
+  }
+
+  .grid-image img {
+    width: 100%;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .menu {
+    bottom: 0;
+    text-align: center;
+  }
+
+  .menu-content {
+    height: 100vh;
+  }
+
+  .menu-content, .menu-content ul {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .close-menu {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+  }
+  
+  .close-menu-label::after {
+    content: '≡';
+    position: fixed;
+    z-index: 2;
+    top: 2rem;
+    right: 2rem;
+    background: var(--color-primary);
+    color: var(--color-white);
+    font-size: 3rem;
+    line-height: 3rem;
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 0.7rem;
+  }
+
+  .close-menu:checked~.menu {
+    display: block;
+  }
+
+  .close-menu:checked~.close-menu-label::after {
+    content: '✖';
+    background: var(--secondary-color);
+  }
+
+  .menu-spacing {
+    display: none;
+  }
 }
