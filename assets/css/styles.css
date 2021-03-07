@@ -309,6 +309,7 @@ table caption {
   padding: 1.5rem 2rem;
   border: none;
   font-size: 3rem;
+  border-radius: 0.5rem;
 }
 
 body .full-width {
@@ -324,6 +325,7 @@ body .full-width {
   font-size: 3rem;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  border-radius: 0.5rem;
 }
 
 .form-group button:hover {
@@ -375,7 +377,15 @@ body .full-width {
 /*Breakpoints*/
 @media(max-width: 80rem) {
   .home-content, .grid {
-    grid-template-columns: 1fr;
+    display: block;
+  }
+
+  .home-img img {
+    width: 80%;
+  }
+
+  .home-img {
+    align-items: center;
   }
 
   .grid {
@@ -451,5 +461,19 @@ body .full-width {
 
   .menu-spacing {
     display: none;
+  }
+}
+
+@media(max-width: 32.1rem) {
+  h2 {
+    font-size: 4.5rem;
+  }
+
+  .home-text-content h2 {
+    font-size: 4.5rem;
+  }
+
+  .form-group button {
+    width: 100%;
   }
 }
